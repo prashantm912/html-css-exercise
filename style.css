@@ -39,26 +39,16 @@ a:hover {
   padding-top: 18px;
 }
 
-/* .logo {
-  display: inline-block;
-}
-
-.logo:hover {
-  text-decoration: none;
-} */
-
 .logo-img {
   height: 50px;
   display: block;
 }
 
-/* main menu bar */
 .navbar {
   display: flex;
   align-items: stretch;
   border: 1px solid rgba(34, 36, 38, 0.15);
   border-radius: 4px;
-  /* margin: 0 0 0; */
   background: #fff;
 }
 
@@ -88,7 +78,6 @@ a:hover {
   border-left: 1px solid rgba(34, 36, 38, 0.1);
 }
 
-/* ---------- Banner / jumbotron ---------- */
 .banner {
   background: #59666c;
   color: #fff;
@@ -121,7 +110,6 @@ a:hover {
   padding: 4px 14px;
 }
 
-/* ---------- Buttons ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -140,7 +128,6 @@ a:hover {
 
 .btn-blue   { background: #2185d0; }
 
-/* ---------- Page title banner ---------- */
 .page-banner {
   background: #eeeeee;
   padding: 22px 0;
@@ -155,7 +142,6 @@ a:hover {
   text-align: center;
 }
 
-/* ---------- Latest news box (banner, home) ---------- */
 .news-box {
   background: #fff;
   color: rgba(0, 0, 0, 0.87);
@@ -163,7 +149,6 @@ a:hover {
   border: 1px solid rgba(34, 36, 38, 0.15);
   padding: 18px 20px;
   width: 330px;
-  /* box-shadow: 0 2px 4px rgba(34, 36, 38, 0.12); */
 }
 
 .news-box h3 {
@@ -177,7 +162,6 @@ a:hover {
   gap: 10px;
   padding: 8px 0;
   border-top: 1px solid #f0f0f0;
-  /* align-items: flex-start; */
 }
 
 .news-item .nicon { color: #59666c; font-size: 16px; margin-top: 2px; }
@@ -190,7 +174,6 @@ a:hover {
 
 .news-box .btn { margin-top: 12px; }
 
-/* ---------- Home: project cards ---------- */
 .projects {
   padding: 34px 0 50px;
 }
@@ -233,7 +216,6 @@ a:hover {
 
 .card .btn { align-self: flex-end; margin-top: 18px; min-width: 110px; }
 
-/* ---------- Footer ---------- */
 .site-footer {
   background: #545454;
   color: rgba(255, 255, 255, 0.85);
@@ -249,7 +231,6 @@ a:hover {
   gap: 14px;
 }
 
-/* ---------- Blank placeholder page ---------- */
 .placeholder {
   min-height: 300px;
   display: flex;
