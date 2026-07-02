@@ -88,22 +88,22 @@ a:hover {
   border-left: 1px solid rgba(34, 36, 38, 0.1);
 }
 
-/* ---------- Hero / jumbotron ---------- */
-.hero {
+/* ---------- Banner / jumbotron ---------- */
+.banner {
   background: #59666c;
   color: #fff;
   padding: 42px 0;
   margin-top: 14px;
 }
 
-.hero .container {
+.banner .container {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: 30px;
 }
 
-.hero-title {
+.banner-title {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.1;
@@ -112,44 +112,13 @@ a:hover {
   padding: 4px 18px;
 }
 
-.hero-sub {
+.banner-sub {
   font-size: 24px;
   font-weight: 700;
   margin-top: 22px;
   background: rgba(255, 255, 255, 0.18);
   display: inline-block;
   padding: 4px 14px;
-}
-
-/* project hero (orm page) */
-.hero-project-title {
-  display: inline-flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 34px;
-  font-weight: 700;
-  background: rgba(255, 255, 255, 0.18);
-  padding: 6px 16px;
-}
-
-.hero-project-title .picon {
-  font-size: 30px;
-}
-
-.hero-project-sub {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 16px;
-  background: rgba(255, 255, 255, 0.18);
-  padding: 4px 12px;
-}
-
-.hero-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 210px;
 }
 
 /* ---------- Buttons ---------- */
@@ -170,10 +139,6 @@ a:hover {
 .btn::after { content: "\2192"; font-weight: 700; }
 
 .btn-blue   { background: #2185d0; }
-.btn-green  { background: #21ba45; }
-.btn-orange { background: #f2711c; }
-.btn-grey   { background: #e0e1e2; color: rgba(0, 0, 0, 0.6); }
-.btn-grey:hover { color: rgba(0, 0, 0, 0.7); }
 
 /* ---------- Page title banner ---------- */
 .page-banner {
@@ -190,15 +155,7 @@ a:hover {
   text-align: center;
 }
 
-.page-banner.left h1 {
-  text-align: left;
-  font-size: 15px;
-  letter-spacing: 0;
-  text-transform: none;
-  font-weight: 700;
-}
-
-/* ---------- Latest news box (hero, home) ---------- */
+/* ---------- Latest news box (banner, home) ---------- */
 .news-box {
   background: #fff;
   color: rgba(0, 0, 0, 0.87);
@@ -206,7 +163,7 @@ a:hover {
   border: 1px solid rgba(34, 36, 38, 0.15);
   padding: 18px 20px;
   width: 330px;
-  box-shadow: 0 2px 4px rgba(34, 36, 38, 0.12);
+  /* box-shadow: 0 2px 4px rgba(34, 36, 38, 0.12); */
 }
 
 .news-box h3 {
@@ -220,7 +177,7 @@ a:hover {
   gap: 10px;
   padding: 8px 0;
   border-top: 1px solid #f0f0f0;
-  align-items: flex-start;
+  /* align-items: flex-start; */
 }
 
 .news-item .nicon { color: #59666c; font-size: 16px; margin-top: 2px; }
@@ -275,146 +232,6 @@ a:hover {
 }
 
 .card .btn { align-self: flex-end; margin-top: 18px; min-width: 110px; }
-
-/* ---------- ORM page layout (3 columns) ---------- */
-.orm-layout {
-  display: grid;
-  grid-template-columns: 220px 1fr 300px;
-  gap: 30px;
-  padding: 30px 0 60px;
-}
-
-/* left sidebar vertical menu */
-.side-menu {
-  border: 1px solid rgba(34, 36, 38, 0.15);
-  border-radius: 4px;
-  background: #fff;
-  margin-bottom: 20px;
-  list-style: none;
-}
-
-.side-menu > li > a,
-.side-menu > li > .parent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 11px 14px;
-  color: rgba(0, 0, 0, 0.75);
-  border-top: 1px solid rgba(34, 36, 38, 0.1);
-  cursor: pointer;
-}
-
-.side-menu > li:first-child > a,
-.side-menu > li:first-child > .parent {
-  border-top: none;
-}
-
-.side-menu > li > a:hover,
-.side-menu > li > .parent:hover {
-  background: rgba(0, 0, 0, 0.03);
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.side-menu > li > a.active {
-  background: #f2f2f2;
-  font-weight: 700;
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.side-menu .ico { color: #9aa1a5; font-size: 13px; }
-
-/* submenu: pure-CSS reveal on hover */
-.has-sub .submenu {
-  list-style: none;
-  display: none;
-  background: #fbfbfb;
-}
-
-.has-sub:hover .submenu {
-  display: block;
-}
-
-.arrow { color: #9aa1a5; }
-
-.submenu li a {
-  display: block;
-  padding: 9px 14px 9px 28px;
-  color: rgba(0, 0, 0, 0.7);
-  border-top: 1px solid rgba(34, 36, 38, 0.08);
-  font-size: 13px;
-}
-
-.submenu li a:hover {
-  background: rgba(0, 0, 0, 0.03);
-  text-decoration: none;
-}
-
-/* center content */
-.orm-content h2 {
-  color: #59666c;
-  font-size: 24px;
-  font-weight: 700;
-  border-bottom: 2px solid #bcae79;
-  padding-bottom: 4px;
-  margin: 26px 0 14px;
-}
-
-.orm-content h2:first-child { margin-top: 0; }
-
-.orm-content p { margin: 12px 0; color: rgba(0, 0, 0, 0.8); }
-
-.orm-content ul {
-  margin: 12px 0 12px 26px;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.orm-content li { margin: 6px 0; }
-
-.info-box {
-  background: #f8ffff;
-  border: 1px solid #a9d5de;
-  color: #276f86;
-  border-radius: 4px;
-  padding: 16px 18px;
-  margin: 20px 0;
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-.info-box .ib-icon { font-size: 20px; }
-
-/* right news column (orm page) */
-.orm-news h3 {
-  font-size: 18px;
-  color: #59666c;
-  margin-bottom: 14px;
-}
-
-.orm-news .news-entry {
-  border-top: 1px solid #eee;
-  padding: 14px 0;
-}
-
-.orm-news .news-entry:first-of-type { border-top: none; }
-
-.orm-news .news-entry a {
-  color: #4183c4;
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.orm-news .date {
-  color: #999;
-  font-size: 12px;
-  margin: 4px 0 6px;
-}
-
-.orm-news .excerpt {
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 13px;
-}
 
 /* ---------- Footer ---------- */
 .site-footer {
