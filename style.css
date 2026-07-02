@@ -1,0 +1,448 @@
+/* ===========================================================
+   Hibernate.org replica - HTML/CSS only exercise
+   No JavaScript, no external libraries or fonts.
+   =========================================================== */
+
+/* ---------- Reset / base ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.87);
+  background: #ffffff;
+}
+
+a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1127px;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+/* ---------- Top header / navigation ---------- */
+.site-header {
+  background: #ffffff;
+  padding-top: 18px;
+}
+
+.logo {
+  display: inline-block;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+.logo-img {
+  height: 30px;
+  display: block;
+}
+
+/* main menu bar */
+.navbar {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 4px;
+  margin: 14px 0 0;
+  background: #fff;
+}
+
+.navbar a {
+  padding: 14px 18px;
+  color: rgba(0, 0, 0, 0.87);
+  border-left: 1px solid rgba(34, 36, 38, 0.1);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.navbar a:first-child { border-left: none; }
+
+.navbar a:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: rgba(0, 0, 0, 0.95);
+  text-decoration: none;
+}
+
+.navbar a.active {
+  background: #f2f2f2;
+  font-weight: 700;
+}
+
+.navbar .spacer {
+  flex: 1 1 auto;
+  border-left: 1px solid rgba(34, 36, 38, 0.1);
+}
+
+/* ---------- Hero / jumbotron ---------- */
+.hero {
+  background: #59666c;
+  color: #fff;
+  padding: 42px 0;
+  margin-top: 14px;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  background: rgba(255, 255, 255, 0.18);
+  display: inline-block;
+  padding: 4px 18px;
+}
+
+.hero-sub {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 22px;
+  background: rgba(255, 255, 255, 0.18);
+  display: inline-block;
+  padding: 4px 14px;
+}
+
+/* project hero (orm page) */
+.hero-project-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 34px;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 6px 16px;
+}
+
+.hero-project-title .picon {
+  font-size: 30px;
+}
+
+.hero-project-sub {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 16px;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 4px 12px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 210px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  background: #2185d0;
+}
+
+.btn:hover { filter: brightness(0.93); text-decoration: none; color: #fff; }
+.btn::after { content: "\2192"; font-weight: 700; }
+
+.btn-blue   { background: #2185d0; }
+.btn-green  { background: #21ba45; }
+.btn-orange { background: #f2711c; }
+.btn-grey   { background: #e0e1e2; color: rgba(0, 0, 0, 0.6); }
+.btn-grey:hover { color: rgba(0, 0, 0, 0.7); }
+
+/* ---------- Page title banner ---------- */
+.page-banner {
+  background: #eeeeee;
+  padding: 22px 0;
+}
+
+.page-banner h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #59666c;
+  text-align: center;
+}
+
+.page-banner.left h1 {
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 700;
+}
+
+/* ---------- Latest news box (hero, home) ---------- */
+.news-box {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.87);
+  border-radius: 4px;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  padding: 18px 20px;
+  width: 330px;
+  box-shadow: 0 2px 4px rgba(34, 36, 38, 0.12);
+}
+
+.news-box h3 {
+  font-size: 18px;
+  color: #59666c;
+  margin-bottom: 12px;
+}
+
+.news-item {
+  display: flex;
+  gap: 10px;
+  padding: 8px 0;
+  border-top: 1px solid #f0f0f0;
+  align-items: flex-start;
+}
+
+.news-item .nicon { color: #59666c; font-size: 16px; margin-top: 2px; }
+
+.news-item a {
+  color: #4183c4;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.news-box .btn { margin-top: 12px; }
+
+/* ---------- Home: project cards ---------- */
+.projects {
+  padding: 34px 0 50px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background: #fafafa;
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 4px;
+  padding: 22px;
+  box-shadow: 0 1px 3px rgba(34, 36, 38, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.card h2 {
+  font-size: 22px;
+  font-weight: 400;
+  color: #59666c;
+  margin-bottom: 16px;
+}
+
+.card .card-body {
+  display: flex;
+  gap: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  flex: 1;
+}
+
+.card .cicon {
+  font-size: 26px;
+  color: #59666c;
+  line-height: 1;
+}
+
+.card .btn { align-self: flex-end; margin-top: 18px; min-width: 110px; }
+
+/* ---------- ORM page layout (3 columns) ---------- */
+.orm-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 300px;
+  gap: 30px;
+  padding: 30px 0 60px;
+}
+
+/* left sidebar vertical menu */
+.side-menu {
+  border: 1px solid rgba(34, 36, 38, 0.15);
+  border-radius: 4px;
+  background: #fff;
+  margin-bottom: 20px;
+  list-style: none;
+}
+
+.side-menu > li > a,
+.side-menu > li > .parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 14px;
+  color: rgba(0, 0, 0, 0.75);
+  border-top: 1px solid rgba(34, 36, 38, 0.1);
+  cursor: pointer;
+}
+
+.side-menu > li:first-child > a,
+.side-menu > li:first-child > .parent {
+  border-top: none;
+}
+
+.side-menu > li > a:hover,
+.side-menu > li > .parent:hover {
+  background: rgba(0, 0, 0, 0.03);
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.side-menu > li > a.active {
+  background: #f2f2f2;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.side-menu .ico { color: #9aa1a5; font-size: 13px; }
+
+/* submenu: pure-CSS reveal on hover */
+.has-sub .submenu {
+  list-style: none;
+  display: none;
+  background: #fbfbfb;
+}
+
+.has-sub:hover .submenu {
+  display: block;
+}
+
+.arrow { color: #9aa1a5; }
+
+.submenu li a {
+  display: block;
+  padding: 9px 14px 9px 28px;
+  color: rgba(0, 0, 0, 0.7);
+  border-top: 1px solid rgba(34, 36, 38, 0.08);
+  font-size: 13px;
+}
+
+.submenu li a:hover {
+  background: rgba(0, 0, 0, 0.03);
+  text-decoration: none;
+}
+
+/* center content */
+.orm-content h2 {
+  color: #59666c;
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom: 2px solid #bcae79;
+  padding-bottom: 4px;
+  margin: 26px 0 14px;
+}
+
+.orm-content h2:first-child { margin-top: 0; }
+
+.orm-content p { margin: 12px 0; color: rgba(0, 0, 0, 0.8); }
+
+.orm-content ul {
+  margin: 12px 0 12px 26px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.orm-content li { margin: 6px 0; }
+
+.info-box {
+  background: #f8ffff;
+  border: 1px solid #a9d5de;
+  color: #276f86;
+  border-radius: 4px;
+  padding: 16px 18px;
+  margin: 20px 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.info-box .ib-icon { font-size: 20px; }
+
+/* right news column (orm page) */
+.orm-news h3 {
+  font-size: 18px;
+  color: #59666c;
+  margin-bottom: 14px;
+}
+
+.orm-news .news-entry {
+  border-top: 1px solid #eee;
+  padding: 14px 0;
+}
+
+.orm-news .news-entry:first-of-type { border-top: none; }
+
+.orm-news .news-entry a {
+  color: #4183c4;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.orm-news .date {
+  color: #999;
+  font-size: 12px;
+  margin: 4px 0 6px;
+}
+
+.orm-news .excerpt {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 13px;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: #545454;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 30px 0;
+  font-size: 13px;
+}
+
+.site-footer a { color: rgba(255, 255, 255, 0.9); }
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+/* ---------- Blank placeholder page ---------- */
+.placeholder {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  color: #59666c;
+}
+
+.placeholder h1 { font-size: 30px; margin-bottom: 12px; }
+.placeholder p { color: rgba(0, 0, 0, 0.6); margin-bottom: 18px; }
