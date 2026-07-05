@@ -2,19 +2,45 @@
 <html lang="en">
 
 <head>
+  <!-- Self-closing tags: meta / link have no closing tag -->
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hibernate. Everything data.</title>
+
+  <!-- Google Font (external stylesheet link) - falls back to system fonts offline -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Link to external CSS file -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Inline <style> block (Styling to HTML tags via <style>) -->
+  <style>
+    /* This tiny highlight class is defined inline in the page just to
+       demonstrate the <style> element. Everything else lives in style.css. */
+    .inline-note {
+      background: #fff3cd;
+      /* named color families vs hex used elsewhere */
+      border-left: 4px solid goldenrod;
+      padding: 8px 12px;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 
-<body>
+<!-- id attribute used as a scroll anchor for the "back to top" button -->
+<body id="top">
 
-  <header class="site-header">
-    <div class="container">
+  <!-- SEMANTIC: <header> -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
       <a href="index.html" class="logo">
+        <!-- <img> self-closing tag with element attributes src / alt / class -->
         <img src="images/hibernate-logo.svg" alt="Hibernate" class="logo-img">
       </a>
-      <nav class="navbar">
+
+      <!-- SEMANTIC: <nav> -->
+      <nav class="navbar" id="mainNav">
         <a href="blank.html">ORM</a>
         <a href="blank.html">Search</a>
         <a href="blank.html">Validator</a>
@@ -28,9 +54,16 @@
         <a href="blank.html">Support</a>
         <a href="blank.html">Follow us</a>
       </nav>
+
+      <!-- JS-driven controls: live clock + theme toggle button -->
+      <div class="toolbar">
+        <span id="clock" class="clock">--:--:--</span>
+        <button id="themeToggle" type="button" class="mini-btn">Dark mode</button>
+      </div>
     </div>
   </header>
 
+  <!-- SEMANTIC: <section> -->
   <section class="banner">
     <div class="container">
       <div>
@@ -38,7 +71,8 @@
         <div><span class="banner-sub">Everything data.</span></div>
       </div>
 
-      <div class="news-box">
+      <!-- SEMANTIC: <aside> - side content next to the main banner -->
+      <aside class="news-box">
         <h3>Latest news</h3>
         <div class="news-item">
           <span class="nicon">&#9640;</span>
@@ -53,7 +87,7 @@
           <a href="blank.html">Hibernate Reactive 4.4.0.Final released</a>
         </div>
         <a href="blank.html" class="btn btn-blue">More news</a>
-      </div>
+      </aside>
     </div>
   </section>
 
@@ -63,76 +97,207 @@
     </div>
   </div>
 
+  <!-- SEMANTIC: <section> with lists + a floated image (float/clear demo) -->
+  <section class="getting-started">
+    <div class="container">
+      <h2 class="section-title">Getting started</h2>
+
+      <img src="images/hibernate-logo.svg" alt="" class="float-logo">
+
+      <p class="lead">
+        Hibernate maps your Java classes to database tables so you can work with
+        objects instead of SQL. Follow the steps below to add it to a project.
+      </p>
+
+      <!-- Ordered list <ol> -->
+      <ol class="steps">
+        <li>Add the Hibernate dependency to your build file.</li>
+        <li>Create a configuration with your datasource.</li>
+        <li>Annotate an entity class with <span class="code">@Entity</span>.</li>
+        <li>Open a session and persist your object.</li>
+      </ol>
+
+      <!-- clear the float before the next block -->
+      <hr class="divider">
+
+      <h3>Why teams pick Hibernate</h3>
+      <!-- Unordered list <ul> -->
+      <ul class="features">
+        <li>Automatic dirty checking</li>
+        <li>First and second level caching</li>
+        <li>Lazy loading of associations</li>
+        <li>Database portability</li>
+      </ul>
+
+      <p class="inline-note">Tip: press <strong>T</strong> anywhere to toggle dark mode.</p>
+    </div>
+  </section>
+
+  <!-- SEMANTIC: <section> holding project cards -->
   <section class="projects">
     <div class="container">
       <div class="card-grid">
 
-        <div class="card">
+        <!-- SEMANTIC: <article> - each self-contained project -->
+        <article class="card">
+          <span class="badge">Core</span>
           <h2>Hibernate ORM</h2>
           <div class="card-body">
             <span class="cicon">&#9640;</span>
-            <span>Domain model persistence for relational databases.</span>
+            <span class="desc">Domain model persistence for relational databases.</span>
           </div>
           <a href="blank.html" class="btn btn-blue">More</a>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <h2>Hibernate Search</h2>
           <div class="card-body">
             <span class="cicon">&#128269;</span>
-            <span>Full-text search for your domain model.</span>
+            <span class="desc">Full-text search for your domain model.</span>
           </div>
           <a href="blank.html" class="btn btn-blue">More</a>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <h2>Hibernate Validator</h2>
           <div class="card-body">
             <span class="cicon">&#9745;</span>
-            <span>Annotation based constraints for your domain model.</span>
+            <span class="desc">Annotation based constraints for your domain model.</span>
           </div>
           <a href="blank.html" class="btn btn-blue">More</a>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <h2>Hibernate Reactive</h2>
           <div class="card-body">
             <span class="cicon">&#9879;</span>
-            <span>Reactive domain model persistence for relational databases.</span>
+            <span class="desc">Reactive domain model persistence for relational databases.</span>
           </div>
           <a href="blank.html" class="btn btn-blue">More</a>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <h2>Data Repositories</h2>
           <div class="card-body">
             <span class="cicon">&#127963;</span>
-            <span>A simplified programming model based on Jakarta Data.</span>
+            <span class="desc">A simplified programming model based on Jakarta Data.</span>
           </div>
           <a href="blank.html" class="btn btn-blue">More</a>
-        </div>
+        </article>
 
-        <div class="card">
+        <article class="card">
           <h2>Others</h2>
           <div class="card-body">
             <span class="cicon">&#9208;</span>
-            <span>Less-active projects (Hibernate Tools, Hibernate OGM, Hibernate Shards).</span>
+            <span class="desc">Less-active projects (Hibernate Tools, Hibernate OGM, Hibernate Shards).</span>
           </div>
           <a href="blank.html" class="btn btn-blue">More</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEMANTIC: <section> with a data <table> -->
+  <section class="compare">
+    <div class="container">
+      <h2 class="section-title">Compare projects</h2>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Project</th>
+            <th>Purpose</th>
+            <th>Latest</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hibernate ORM</td>
+            <td>Object / relational mapping</td>
+            <td>8.0.0.Beta1</td>
+          </tr>
+          <tr>
+            <td>Hibernate Search</td>
+            <td>Full-text search</td>
+            <td>7.2.0.Final</td>
+          </tr>
+          <tr>
+            <td>Hibernate Validator</td>
+            <td>Bean validation</td>
+            <td>9.0.0.Final</td>
+          </tr>
+          <tr>
+            <td>Hibernate Reactive</td>
+            <td>Non-blocking persistence</td>
+            <td>4.4.0.Final</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SEMANTIC: <section> - the JavaScript playground -->
+  <section class="interactive">
+    <div class="container">
+      <h2 class="section-title">Try it (JavaScript)</h2>
+
+      <div class="demo-grid">
+
+        <!-- Greeting: alert + prompt + input values -->
+        <div class="demo-panel">
+          <h3>Greeting</h3>
+          <button id="greetBtn" type="button" class="btn btn-green">Say hello</button>
+          <p id="greeting" class="greeting-out"></p>
+        </div>
+
+        <!-- Create elements from an input value -->
+        <div class="demo-panel">
+          <h3>Reading list</h3>
+          <input id="noteInput" type="text" placeholder="Add a topic..." class="text-input">
+          <button id="addNoteBtn" type="button" class="btn btn-blue">Add</button>
+          <ul id="noteList" class="note-list"></ul>
+        </div>
+
+        <!-- Animation / element movement -->
+        <div class="demo-panel">
+          <h3>Animation</h3>
+          <div class="mover-track">
+            <div id="mover" class="mover"></div>
+          </div>
+          <button id="moveBtn" type="button" class="btn btn-blue">Animate</button>
+        </div>
+
+        <!-- Keyboard tracking -->
+        <div class="demo-panel">
+          <h3>Keyboard</h3>
+          <p>Last key pressed:</p>
+          <p id="keyLog" class="key-log">none</p>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- SEMANTIC: <footer> -->
   <footer class="site-footer">
     <div class="container">
-      <span>&copy; Red Hat, Inc. & individual contributors -- Hibernate</span>
-      <span><a href="blank.html">Community</a> . <a href="blank.html">Support</a> . <a href="blank.html">Follow
-          us</a></span>
+      <span>
+        &copy; Red Hat, Inc. &amp; individual contributors -- Hibernate<br>
+        <!-- <br> line break, then an email hyperlink -->
+        Questions? <a href="mailto:info@hibernate.example">info@hibernate.example</a>
+      </span>
+      <span>
+        <a href="blank.html">Community</a> . <a href="blank.html">Support</a> .
+        <a href="blank.html">Follow us</a>
+      </span>
     </div>
   </footer>
 
+  <!-- Fixed-position button shown on scroll (window scroll event) -->
+  <a href="#top" id="scrollTop" class="scroll-top" title="Back to top">&#8593;</a>
+
+  <!-- JavaScript file loaded at end so the DOM exists first -->
+  <script src="script.js"></script>
 </body>
 
 </html>
